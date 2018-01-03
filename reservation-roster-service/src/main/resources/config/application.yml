@@ -1,0 +1,31 @@
+server:
+  port: 7577
+
+spring:
+  profiles:
+    active: sysTest,oauth2
+  application:
+    name: Reservation Roster system
+  datasource:
+    url: jdbc:mysql://localhost:3306/reservation?tinyInt1isBit=false
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    validationQuery: SELECT 1
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+info:
+  app:
+    name: Reservation Roster System
+    description: Reservation Roster System API
+
+logging:
+  level:
+    org:
+      springframework: WARN
+   
+
